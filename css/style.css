@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #F2E9E4;
+}
+
+.section {
+    height: 100vh;
+}
+
+.intro {
+    margin-left: 10vw;
+}
+
+.main-text {
+    font-size: 5em;
+    color: #4A4E69;
+}
+
+.sub-text {
+    font-size: 3em;
+}
+
+.proficiences-icons {
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: #4A4E69;
+    width: 15em;
+    height: 15em;
+    margin: 10%;
+    padding: 5%;
+}
+
+.contact-icons {
+    width: 12em;
+    height: 12em;
+    margin: 5em;
+}
+
+.btn-dark {
+    background-color:#4A4E69;
+    color: #F2E9E4;
+    border-style: none;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-dark:hover{
+    background-color: #34374b;
+    color: #F2E9E4;
+}
+
+mark {
+    padding-top: 0.01%;
+    padding-bottom: 0.01%;
+    border-radius: 0.2em;
+}
+
+.intro-words {
+    overflow: hidden;
+}
+
+@keyframes spin_words {
+    13% {
+        transform: translateY(-112%);
+    }
+
+    24% {
+        transform: translateY(-100%);
+    }
+
+    41% {
+        transform: translateY(-212%);
+    }
+
+    58% {
+        transform: translateY(-200%);
+    }
+
+    75% {
+        transform: translateY(-312%);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}
