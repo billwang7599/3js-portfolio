@@ -17,26 +17,36 @@
 <body>
 
     <div class="section d-flex flex-column align-items-center justify-content-center">
-        <h1 class="main-text">print("Welcome to my page!")</h1>
+        <div class="title-container">
+            <div class="title-wrapper">
+                <h1 class="main-text"><span style="color: #C9ADA7;">print</span><span
+                        style="color: #22223B;">("</span>Welcome
+                    to my page!<span style="color: #22223B;">")</span></h1>`
+            </div>
+        </div>
         <h2 class="sub-text">Bill Wang</h2>
     </div>
 
     <div class="section d-flex flex-column justify-content-center">
         <div class="intro">
             <h1 class="main-text">Hello! I'm a <mark>student</mark> who </h1>
-            <div class="d-flex justify-content-center">
+
+            <!-- Centers text and sets a wrapper for the whole sentence. Adjust height will adjust the height of the spinner words -->
+            <div class="d-flex justify-content-center" style="box-sizing: content-box; height: 20%">
                 <h1 class="main-text"> loves to </h1>
-                <div class="intro-words main-text d-flex flex-column justify-content-center">
-                    <mark>
+
+                <!-- The words that cycle using spinner class. intro-words is a wrapper class that hides the overflow of words -->
+                <div class="intro-words main-text">
+                    <mark class="spinner">
                         <span>code</span>
                     </mark>
-                    <mark>
+                    <mark class="spinner">
                         <span>innovate</span>
-                    </mark>
-                    <mark>
+                    </mark class="spinner">
+                    <mark class="spinner">
                         <span>have fun</span>
                     </mark>
-                    <mark>
+                    <mark class="spinner">
                         <span>code</span>
                     </mark>
                 </div>
@@ -56,9 +66,15 @@
     <div class="section d-flex flex-column align-items-center justify-content-center">
         <button class="btn-dark sub-text">Resume</button>
         <div style="margin-top: 2em;">
-            <img class="contact-icons" src="media/akar-icons_linkedin-fill.png" alt="LinkedIn">
-            <img class="contact-icons" src="media/dashicons_email.png" alt="Email">
-            <img class="contact-icons" src="media/bi_github.png" alt="GitHub">
+            <a href="https://www.linkedin.com/in/billwang7599/" target="_blank">
+                <img class="contact-icons" src="media/akar-icons_linkedin-fill.png" alt="LinkedIn">
+            </a>
+            <a href="mailto: billwang7599@gmail.com">
+                <img class="contact-icons" src="media/dashicons_email.png" alt="Email">
+            </a>
+            <a href="https://github.com/billwang7599" target="_blank">
+                <img class="contact-icons" src="media/bi_github.png" alt="GitHub">
+            </a>
         </div>
     </div>
 </body>

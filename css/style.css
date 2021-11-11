@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: #F2E9E4;
+}
+
+a {
+    text-decoration: none;
 }
 
 .section {
@@ -21,6 +32,7 @@ body {
 
 .sub-text {
     font-size: 3em;
+    color: #22223B;
 }
 
 .proficiences-icons {
@@ -34,9 +46,10 @@ body {
 }
 
 .contact-icons {
-    width: 12em;
-    height: 12em;
+    width: 9em;
+    height: 9em;
     margin: 5em;
+    margin-top: 7em;
 }
 
 .btn-dark {
@@ -58,6 +71,12 @@ mark {
     padding-top: 0.01%;
     padding-bottom: 0.01%;
     border-radius: 0.2em;
+}
+
+.spinner {
+    display: block;
+    height: 100%;
+    animation: spin_words 6s infinite;
 }
 
 .intro-words {
@@ -89,3 +108,23 @@ mark {
         transform: translateY(-300%);
     }
 }
+/*
+.title-container {
+    font-family: "Source Code Pro", monospace;
+}
+
+.title-container::before,
+.title-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.title-container::before {
+    background-color: #22223B;
+}
+
+*/
