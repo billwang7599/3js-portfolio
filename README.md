@@ -2,4 +2,4 @@
 
 Third iteration of my personal portfolio - minamilistic vibes
 
-Can be found at: billwang7599.github.io
+Can be found @: https://billwang7599.github.io/
