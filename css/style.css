@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: #F2E9E4;
