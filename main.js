@@ -271,7 +271,6 @@ domEvents.addEventListener(sphere, 'click', event => { // Goes to main page
 
 // animation
 function animate() {
-	requestAnimationFrame( animate );
 
 	sphere.rotation.x += 0.005;
 	sphere.rotation.y += 0.005;
@@ -281,9 +280,9 @@ function animate() {
     resume.rotation.y -= 0.002;
 
 	renderer.render( scene, camera );
+	requestAnimationFrame( animate );
 }
 
-animate()
 
 // other stuff 
 $('h1').css('opacity', 1)
@@ -355,3 +354,6 @@ function goToDark() {
         }
     }
 }
+
+// threejs animation
+animate()
