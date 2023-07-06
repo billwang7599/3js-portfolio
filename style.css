@@ -12,7 +12,7 @@ header {
 }
 
 h1 {
-    font-size: 9vh;
+    font-size: 8.5vh;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
