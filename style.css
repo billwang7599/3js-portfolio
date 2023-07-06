@@ -12,7 +12,7 @@ header {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 10vh;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -28,7 +28,7 @@ h1 {
 
 p {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.9rem;
+    font-size: 3vh;
     color: #2E4057;
     text-align: center;
 }
