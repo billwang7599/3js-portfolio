@@ -243,8 +243,8 @@ gsap.to('.char', {
     duration: .1
 })
 
-$('canvas').click(goToDark)
-$("canvas").on("tap", goToDark);
+// $('canvas').click(goToDark)
+$("canvas").on("click touchstart", goToDark);
 
 anime({
     targets: "#head-container",
