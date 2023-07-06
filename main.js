@@ -151,6 +151,12 @@ function onDocumentMouseMove(event) {
 }
 
 // click events
+domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
+    if ( $('canvas').css('opacity')==1 ) {
+        window.open('https://github.com/billwang7599', '_blank').focus()
+    }
+})
+
 domEvents.addEventListener(github, 'click', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
         window.open('https://github.com/billwang7599', '_blank').focus()
@@ -240,54 +246,8 @@ gsap.to('.char', {
 })
 
 $(document).ready(function(){
-    $('canvas').click(function() {
-        $("canvas").get(0).style.setProperty("position", "absolute")
-        if ( $('canvas').css('opacity')== 0 && $('body').css('background-color') == "rgb(245, 245, 245)") {
-            $('link[rel="icon"]').attr('href', './favicons/bw-dark.png')
-
-            anime({
-                targets: '.char',
-                translateY: 400,
-                duration: 400,
-                easing: 'linear'
-            })
-
-            anime({
-                targets: '#hello-container',
-                translateY: -90,
-                duration: 1200,
-                easing: 'linear',
-            })
-
-            anime({
-                targets: '#head-container',
-                translateY: -100,
-                duration: 1200,
-                easing: 'linear'
-            })
-
-            anime({
-                targets: 'body',
-                backgroundColor: "#040303",
-                duration: 800,
-                delay: 800,
-                easing: "linear",
-            })
-
-            anime({
-                targets: 'canvas',
-                duration: 2000,
-                opacity: 1,
-                easing: "linear",
-                delay: 2000
-            })
-            console.log($('#head-container').position().top)
-            if ($('#head-container').position().top < 0) {
-                $('#head-container').css('top', -500)
-            console.log($('#head-container').position().top)
-            }
-        }
-    })
+    $('canvas').click(goToDark)
+    $("canvas").on("tap", goToDark);
 })
 
 anime({
@@ -297,3 +257,53 @@ anime({
     delay: 1200,
     easing: "linear"
 })
+
+
+function goToDark() {
+    $("canvas").get(0).style.setProperty("position", "absolute")
+    if ( $('canvas').css('opacity')== 0 && $('body').css('background-color') == "rgb(245, 245, 245)") {
+        $('link[rel="icon"]').attr('href', './favicons/bw-dark.png')
+
+        anime({
+            targets: '.char',
+            translateY: 400,
+            duration: 400,
+            easing: 'linear'
+        })
+
+        anime({
+            targets: '#hello-container',
+            translateY: -90,
+            duration: 1200,
+            easing: 'linear',
+        })
+
+        anime({
+            targets: '#head-container',
+            translateY: -100,
+            duration: 1200,
+            easing: 'linear'
+        })
+
+        anime({
+            targets: 'body',
+            backgroundColor: "#040303",
+            duration: 800,
+            delay: 800,
+            easing: "linear",
+        })
+
+        anime({
+            targets: 'canvas',
+            duration: 2000,
+            opacity: 1,
+            easing: "linear",
+            delay: 2000
+        })
+        console.log($('#head-container').position().top)
+        if ($('#head-container').position().top < 0) {
+            $('#head-container').css('top', -500)
+        console.log($('#head-container').position().top)
+        }
+    }
+}
