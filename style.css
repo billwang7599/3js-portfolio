@@ -1,0 +1,50 @@
+body {
+    background-color: #F5F5F5;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+    opacity: 0;
+}
+
+.char {
+    color: #2E4057;
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.9rem;
+    color: #2E4057;
+    text-align: center;
+}
+
+#head-container {
+    position: relative;
+    top: -6rem;
+}
+
+#hello-container {
+    position: relative;
+    top: -10em;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
