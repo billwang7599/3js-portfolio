@@ -169,6 +169,7 @@ domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
 
 domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
+        alert("test")
         window.open('https://linkedin.com/in/bw7599', '_blank').focus()
     }
 })
