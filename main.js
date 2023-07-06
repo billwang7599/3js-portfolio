@@ -232,9 +232,7 @@ function animate() {
 animate()
 
 // other stuff 
-$(document).ready(function(){
-    $('h1').css('opacity', 1)
-})
+$('h1').css('opacity', 1)
 
 const myText = new SplitType('#my-text')
 
@@ -245,10 +243,8 @@ gsap.to('.char', {
     duration: .1
 })
 
-$(document).ready(function(){
-    $('canvas').click(goToDark)
-    $("canvas").on("tap", goToDark);
-})
+$('canvas').click(goToDark)
+$("canvas").on("tap", goToDark);
 
 anime({
     targets: "#head-container",
