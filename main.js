@@ -25,7 +25,7 @@ window.addEventListener('resize', () =>
 })
 
 const renderer = new THREE.WebGLRenderer({
-    // alpha: true,
+    alpha: true,
 });
 renderer.setSize( sizes.width, sizes.height);
 renderer.shadowMap.enabled = true
@@ -172,6 +172,7 @@ domEvents.addEventListener(resume, 'click', event => { // Go to git link
 domEvents.addEventListener(sphere, 'click', event => { // Goes to main page
     if ( $('canvas').css('opacity')==1 ) {
         $(document).ready(function(){
+            $('link[rel="icon"]').attr('href', './favicons/bw-white.png')
             $("#hello-container").get(0).style.setProperty("top", "-10rem")
             anime({
                 targets: '.char',
@@ -241,7 +242,9 @@ gsap.to('.char', {
 $(document).ready(function(){
     $('canvas').click(function() {
         $("canvas").get(0).style.setProperty("position", "absolute")
-        if ( $('canvas').css('opacity')== 0 ) {
+        if ( $('canvas').css('opacity')== 0 && $('body').css('background-color') == "rgb(245, 245, 245)") {
+            $('link[rel="icon"]').attr('href', './favicons/bw-dark.png')
+
             anime({
                 targets: '.char',
                 translateY: 400,
@@ -278,6 +281,11 @@ $(document).ready(function(){
                 easing: "linear",
                 delay: 2000
             })
+            console.log($('#head-container').position().top)
+            if ($('#head-container').position().top < 0) {
+                $('#head-container').css('top', -500)
+            console.log($('#head-container').position().top)
+            }
         }
     })
 })
@@ -285,7 +293,7 @@ $(document).ready(function(){
 anime({
     targets: "#head-container",
     translateY: 100,
-    duration: 500,
-    delay: 1000,
+    duration: 1200,
+    delay: 1200,
     easing: "linear"
 })
