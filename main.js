@@ -300,10 +300,8 @@ function goToDark() {
             easing: "linear",
             delay: 2000
         })
-        console.log($('#head-container').position().top)
         if ($('#head-container').position().top < 0) {
             $('#head-container').css('top', -500)
-        console.log($('#head-container').position().top)
         }
     }
 }
