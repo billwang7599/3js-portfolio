@@ -92,12 +92,13 @@ scene.add( resume )
 
 // light source(s)
 const pointLightTop = new THREE.PointLight(0xFFFFFF, 10, 15)
-const pointLightBottom = new THREE.PointLight(0xFFFFFF, 5, 5)
+const pointLightBottom = new THREE.PointLight(0xFFFFFF, 0.1, 3)
 pointLightTop.position.set(0, 10, 0)
 pointLightBottom.position.set(0, -1.5, 2)
 pointLightBottom.castShadow = true
 pointLightTop.castShadow = true
 scene.add(pointLightTop)
+scene.add(pointLightBottom)
 // mobile check
 window.mobileAndTabletCheck = function() {
   let check = false;
@@ -106,7 +107,7 @@ window.mobileAndTabletCheck = function() {
 };
 
 if (window.mobileAndTabletCheck()) {
-    scene.add(pointLightBottom)
+    pointLightBottom.intensity = 1
 }
 
 // cursor point light -- https://codepen.io/hermesgrau/pen/xxxqdPy
