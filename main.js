@@ -161,22 +161,22 @@ function onDocumentMouseMove(event) {
 }
 
 // tap events -- horribly optimized
+var windowReference = window.open();
 domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        window.open('https://github.com/billwang7599', '_blank').focus()
+        windowReference.location = 'https://github.com/billwang7599'
     }
 })
 
 domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        alert("test")
-        window.open('https://linkedin.com/in/bw7599', '_blank').focus()
+        windowReference.location = 'https://linkedin.com/in/bw7599'
     }
 })
 
 domEvents.addEventListener(resume, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        window.open('/resume.pdf', '_blank').focus()
+        windowReference.location = '/resume.pdf'
     }
 })
 
