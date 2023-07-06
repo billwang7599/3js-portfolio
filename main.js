@@ -245,9 +245,9 @@ domEvents.addEventListener(sphere, 'click', event => { // Goes to main page
             anime({
                 targets: '#hello-container',
                 translateY: 90,
-                duration: 800,
+                duration: 1200,
                 easing: 'linear',
-                delay: 1800
+                delay: 2200
             })
 
             anime({
