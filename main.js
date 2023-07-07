@@ -161,24 +161,26 @@ function onDocumentMouseMove(event) {
 }
 
 // tap events -- horribly optimized
-var windowReference = window.open();
+var uagent = navigator.userAgent.toLowerCase();
 domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        setTimeout(() => {
-            window.open('https://github.com/billwang7599', '_blank');
-        })
+        window.open('https://github.com/billwang7599', '_blank');
+
+        if(/safari/.test(uagent) && !/chrome/.test(uagent)) {
+            window.location.href = "https://github.com/billwang7599"
+        }
     }
 })
 
 domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        windowReference.location = 'https://linkedin.com/in/bw7599'
+        window.open('https://linkedin.com/in/bw7599', '_blank');
     }
 })
 
 domEvents.addEventListener(resume, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        windowReference.location = '/resume.pdf'
+        window.open('/resume.pdf', '_blank');
     }
 })
 
