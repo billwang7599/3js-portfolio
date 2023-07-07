@@ -21,11 +21,13 @@ window.addEventListener('resize', () =>
 
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setPixelRatio(window.devicePixelRatio);
+    //renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
 const renderer = new THREE.WebGLRenderer({
     alpha: true,
+    antialias: true,
 });
 renderer.setSize( sizes.width, sizes.height);
 renderer.shadowMap.enabled = true
@@ -78,17 +80,6 @@ scene.add( sphere )
 scene.add( github )
 scene.add( linkedin )
 scene.add( resume )
-
-// text
-// const fontLoader = new FontLoader()
-
-// fontLoader.load('./fonts/Quicksand-Regular.json', function (font) {
-//     const fontGeo = new TextGeometry('Hello world', {
-//         font: font,
-//         size: 6,
-//         height: 2,
-//     })
-// })
 
 // light source(s)
 const pointLightTop = new THREE.PointLight(0xFFFFFF, 10, 15)
