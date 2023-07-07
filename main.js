@@ -160,91 +160,49 @@ function onDocumentMouseMove(event) {
     }
 }
 
-// tap events -- horribly optimized
-var uagent = navigator.userAgent.toLowerCase();
+// tap events 
 domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        window.open('https://github.com/billwang7599', '_blank');
-
-        if(/safari/.test(uagent) && !/chrome/.test(uagent)) {
-            window.location.href = "https://github.com/billwang7599"
-        }
+        window.location.href = "https://github.com/billwang7599"
     }
 })
 
-domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to git link
+domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to linkedin
     if ( $('canvas').css('opacity')==1 ) {
-        window.open('https://linkedin.com/in/bw7599', '_blank');
+        window.location.href = "https://linkedin.com/in/bw7599"
     }
 })
 
-domEvents.addEventListener(resume, 'touchstart', event => { // Go to git link
+domEvents.addEventListener(resume, 'touchstart', event => { // Go to resume
     if ( $('canvas').css('opacity')==1 ) {
-        window.open('/resume.pdf', '_blank');
+        window.location.href = "/resume.pdf"
     }
 })
 
-domEvents.addEventListener(sphere, 'touchstart', event => { // Goes to main page
-    if ( $('canvas').css('opacity')==1 ) {
-        $(document).ready(function(){
-            $('link[rel="icon"]').attr('href', './favicons/bw-white.png')
-            $("#hello-container").get(0).style.setProperty("top", "-10rem")
-            anime({
-                targets: '.char',
-                translateY: 0,
-                duration: 400,
-                easing: 'linear',
-                delay: 1800
-            })
-
-            anime({
-                targets: '#hello-container',
-                translateY: 90,
-                duration: 800,
-                easing: 'linear',
-                delay: 1800
-            })
-
-            anime({
-                targets: 'body',
-                backgroundColor: "#F5F5F5",
-                duration: 600,
-                delay: 1500,
-                easing: "linear",
-            })
-
-            anime({
-                targets: 'canvas',
-                duration: 1000,
-                opacity: 0,
-                easing: "linear",
-                delay: 0
-            })
-        })
-    }
-})
+domEvents.addEventListener(sphere, 'touchstart', event => goToLight())
 
 // click events
-
 domEvents.addEventListener(github, 'click', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
         window.open('https://github.com/billwang7599', '_blank').focus()
     }
 })
 
-domEvents.addEventListener(linkedin, 'click', event => { // Go to git link
+domEvents.addEventListener(linkedin, 'click', event => { // Go to linkedin
     if ( $('canvas').css('opacity')==1 ) {
         window.open('https://linkedin.com/in/bw7599', '_blank').focus()
     }
 })
 
-domEvents.addEventListener(resume, 'click', event => { // Go to git link
+domEvents.addEventListener(resume, 'click', event => { // Go to resume
     if ( $('canvas').css('opacity')==1 ) {
         window.open('/resume.pdf', '_blank').focus()
     }
 })
 
-domEvents.addEventListener(sphere, 'click', event => { // Goes to main page
+domEvents.addEventListener(sphere, 'click', event => goToLight() )
+
+function goToLight() { // Goes to main page
     if ( $('canvas').css('opacity')==1 ) {
         $(document).ready(function(){
             $('link[rel="icon"]').attr('href', './favicons/bw-white.png')
@@ -282,7 +240,8 @@ domEvents.addEventListener(sphere, 'click', event => { // Goes to main page
             })
         })
     }
-})
+}
+
 
 // animation
 function animate() {
