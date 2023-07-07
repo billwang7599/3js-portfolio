@@ -173,13 +173,11 @@ domEvents.addEventListener(github, 'touchstart', event => { // Go to git link
 domEvents.addEventListener(linkedin, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
         windowReference.location = 'https://linkedin.com/in/bw7599'
-        windowReference.location = 'https://linkedin.com/in/bw7599'
     }
 })
 
 domEvents.addEventListener(resume, 'touchstart', event => { // Go to git link
     if ( $('canvas').css('opacity')==1 ) {
-        windowReference.location = '/resume.pdf'
         windowReference.location = '/resume.pdf'
     }
 })
